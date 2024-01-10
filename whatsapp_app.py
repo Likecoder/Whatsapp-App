@@ -27,7 +27,7 @@ if file is not None:
     condition =True
 
 if st.sidebar.checkbox(" : Upload Sample Chats"):
-    with open("WhatsApp Chat with Yogesh 10th.txt", "r", encoding="utf-8") as f:
+    with open("Yogesh.txt", "r", encoding="utf-8") as f:
         rawdata = f.read()
         condition = True
 
