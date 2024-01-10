@@ -21,9 +21,19 @@ with st.sidebar:    # or simply use st.sidebar.title
 
 
 
-file = st.sidebar.file_uploader(":red[Please Enter Chat File]", type=["txt"])
-
+condition = False
+file = st.sidebar.file_uploader(":red[Upload Chat File]", type=["txt"])
 if file is not None:
+    data = file.getvalue()
+    rawdata = data.decode("utf-8")
+    condition =True
+
+if st.sidebar.checkbox(" : Upload Sample Chats"):
+    with open("sample.txt", "r", encoding="utf-8") as f:
+        rawdata = f.read()
+        condition = True
+
+if condition:
 
     # we have data in binary formay..we need in string format
     bytes = file.getvalue()
@@ -248,6 +258,11 @@ if file is not None:
             s = plt.figure()
             plt.pie(emoji_df["Times Used"], labels=emoji_df["Emoji"], autopct="%.2f%%")
             st.pyplot(s)
+                 
+with st.sidebar:
+    st.write("Instagram Account : [Click Me](https://www.instagram.com/lalit.srawat?igsh=bmM3eGM0ZjQ3cTgx)")
+    st.write("Github Account : [Click Me](https://github.com/Snow-Hell/Whatsapp-App/)")
+
 
 with st.sidebar:
     st.markdown("### :red[Steps ----]")
