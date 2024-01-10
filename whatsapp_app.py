@@ -13,7 +13,7 @@ from collections import Counter
 
 st.title(":red[Whatsapp Chat Exploration !]  :green[explore your Chats]")
 st.write("It is a tool to analyse the datsets. Here the dataset comprises of whatsapp chats either personally or of groups\n"
-         "By importing your WhatsappChatWithSomeone.txt you can see a detailed analysis of your chats\n")
+         "By importing your WhatsappChatWithSomeone.txt you can see a detailed analysis of your chats\n:red[Open Sidebar to upload File]")
 
 with st.sidebar:    # or simply use st.sidebar.title
     st.title(":blue[Whatsapp Chat Exploration!]")
