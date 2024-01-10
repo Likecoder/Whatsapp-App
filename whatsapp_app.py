@@ -3,9 +3,9 @@ import processing, fetchstats
 from matplotlib import pyplot as plt
 from wordcloud import WordCloud, STOPWORDS
 import seaborn as sns
-
 import time
-
+from urlextract import URLExtract
+from collections import Counter
 
 
 # https://docs.streamlit.io/library/cheatsheet
@@ -254,3 +254,4 @@ with st.sidebar:
     st.write("• Click on Export Chat  >  select Without Media  >  Save the File ")
     st.write("• Upload File Here ")
     st.write("• Select User  >  Click Show Analysis")
+         
