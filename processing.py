@@ -49,7 +49,7 @@ def process(data):
     df2 = df.copy()
 
     from datetime import datetime
-    df2["Date"] = df2["Date"].apply(lambda x: datetime.strptime(x, "%d/%m/%y, %I:%M %p"))
+    df2["Date"] = pd.to_datetime(df2["Date"])  
 
     # getting month name from its number
     # we can use [date].dt.month_name(), .dt.month , .dt.hour, .dt.minute, .dt.year, etc more functions to use
