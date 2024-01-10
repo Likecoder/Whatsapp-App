@@ -48,18 +48,12 @@ def process(data):
 
     df2 = df.copy()
 
-    from datetime import datetime
     df2["Date"] = pd.to_datetime(df2["Date"])  
 
-    # getting month name from its number
-    # we can use [date].dt.month_name(), .dt.month , .dt.hour, .dt.minute, .dt.year, etc more functions to use
-    # but i using simple approach
     month_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
                    'November', 'December']
 
-    # Use the month number to get the month name from the list or dictionary
 
-    # use any functions to add these ----------------
     df2["Day"] = df2["Date"].apply(lambda x: x.day)
 
     df2["Month"] = df2["Date"].apply(lambda x: month_names[x.month - 1])  # using list make above
