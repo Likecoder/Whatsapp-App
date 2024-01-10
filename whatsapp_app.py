@@ -259,8 +259,8 @@ if condition:
             st.pyplot(s)
 
 with st.sidebar:
-    st.write("Instagram : [Account](https://www.instagram.com/lalit.srawat?igsh=bmM3eGM0ZjQ3cTgx)")
-    st.write("Github : [Account](https://github.com/Snow-Hell/Whatsapp-App/)")
+    st.write("Instagram : [Click Me](https://www.instagram.com/lalit.srawat?igsh=bmM3eGM0ZjQ3cTgx)")
+    st.write("Github : [Click Me](https://github.com/Snow-Hell/Whatsapp-App/)")
 with st.sidebar:
     st.markdown("### :red[Steps ----]")
     st.write('''• Go to Whatsapp  >  Open Chats  >  Click Dots > Click More''')
