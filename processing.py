@@ -48,7 +48,7 @@ def process(data):
 
     df2 = df.copy()
 
-    df2["Date"] = pd.to_datetime(df2["Date"])  
+    df2["Date"] = pd.to_datetime(df2["Date"], dayfirst = True)  
 
     month_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
                    'November', 'December']
